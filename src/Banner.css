@@ -1,6 +1,7 @@
 .banner{
     
     height: 448px;
+    width: 100%;
     position: relative;
     color: white;
     object-fit: contain;
@@ -36,7 +37,7 @@
     background-image: linear-gradient(
         180deg,
         transparent,
-        rgba(37, 37, 0.61),
+        rgb(64, 64, 49),
         #111
     );
 }

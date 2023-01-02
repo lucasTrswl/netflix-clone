@@ -10,10 +10,10 @@ import requests from "./Requests";
 
         useEffect(() => {
             async function fetchData() {
-                const request = await axios.get(requests.fetchNetflixOriginals);
+                const request = await axios.get(requests.fetchTrending);
                 setMovie(
                     request.data.results[
-                        Math.floor(Math.random() * request.data.results.length - 1)
+                        Math.floor(Math.random() * request.data.results.length)
                     ]
                 );
                 return request;
@@ -31,6 +31,7 @@ import requests from "./Requests";
         return (
             <header className='banner'
             style={{
+                objectFit: "contain",
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path} ")`,
                 backgroundPosition: "center center",
             }}
